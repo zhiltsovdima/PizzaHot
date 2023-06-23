@@ -28,6 +28,7 @@
 		62304DD02A44962E004D5127 /* DataCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304DCF2A44962E004D5127 /* DataCoder.swift */; };
 		62304DD32A449662004D5127 /* DataCodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304DD22A449662004D5127 /* DataCodingError.swift */; };
 		62304DD62A449B76004D5127 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304DD52A449B76004D5127 /* Food.swift */; };
+		62304DD92A455919004D5127 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304DD82A455919004D5127 /* FoodCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		62304DCF2A44962E004D5127 /* DataCoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoder.swift; sourceTree = "<group>"; };
 		62304DD22A449662004D5127 /* DataCodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCodingError.swift; sourceTree = "<group>"; };
 		62304DD52A449B76004D5127 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		62304DD82A455919004D5127 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		62304DA32A4452C5004D5127 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				62304DD72A4558D6004D5127 /* Cell */,
 				62304DD42A449B5C004D5127 /* Entities */,
 				62304DA72A445399004D5127 /* MenuViewController.swift */,
 				62304DA92A4453CC004D5127 /* MenuPresenter.swift */,
@@ -224,6 +227,14 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		62304DD72A4558D6004D5127 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				62304DD82A455919004D5127 /* FoodCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -311,6 +322,7 @@
 				62304DAA2A4453CC004D5127 /* MenuPresenter.swift in Sources */,
 				62304DBC2A447966004D5127 /* TabBarPage.swift in Sources */,
 				62304DD02A44962E004D5127 /* DataCoder.swift in Sources */,
+				62304DD92A455919004D5127 /* FoodCell.swift in Sources */,
 				62304DC62A447C8B004D5127 /* NetworkManager.swift in Sources */,
 				62304DB92A4466BE004D5127 /* R.swift in Sources */,
 			);
