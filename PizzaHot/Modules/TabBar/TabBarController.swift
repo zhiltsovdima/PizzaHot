@@ -16,7 +16,7 @@ final class TabBarController: UITabBarController {
     }
     
     private func setupAppearance() {
-        tabBar.tintColor = R.Colors.tabBarTint
+        tabBar.tintColor = R.Colors.accent
         tabBar.backgroundColor = R.Colors.tabBarBackgrorund
     }
 }

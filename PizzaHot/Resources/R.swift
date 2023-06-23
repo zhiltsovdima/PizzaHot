@@ -30,10 +30,14 @@ enum R {
     
     enum Colors {
         static let tabBarBackgrorund = UIColor.white
-        static let tabBarTint = UIColor.systemPink
+        static let accent = UIColor.systemPink
+        static let lightAccent = UIColor.systemPink.withAlphaComponent(0.5)
     }
     
     enum Identifiers {
         static let foodCell = "FoodCell"
+        static let bannerCell = "BannerCell"
+        static let categoriesView = "CategoriesView"
+        static let categoryCell = "CategoryCell"
     }
 }

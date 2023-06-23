@@ -34,18 +34,37 @@ final class FoodCell: UITableViewCell {
     private func setupViews() {
         backgroundColor = .clear
         
-        [foodImage, stackView].forEach {
+        [foodImage, stackView, priceLabel].forEach {
             addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
-        stackView.axis = .vertical
         
-        [nameLabel, descriptionLabel, priceLabel].forEach {
+        stackView.axis = .vertical
+        stackView.distribution = .fill
+        stackView.spacing = 10
+        
+        [nameLabel, descriptionLabel].forEach {
             stackView.addArrangedSubview($0)
         }
+        
+        nameLabel.font = .boldSystemFont(ofSize: 18)
+        nameLabel.numberOfLines = 0
+        
+        descriptionLabel.font = .systemFont(ofSize: 13)
+        descriptionLabel.numberOfLines = 0
+        descriptionLabel.textColor = .lightGray
+        
+        priceLabel.backgroundColor = .clear
+        priceLabel.textColor = R.Colors.accent
+        priceLabel.font = .systemFont(ofSize: 14)
+        priceLabel.textAlignment = .center
+        priceLabel.layer.borderColor = R.Colors.accent.cgColor
+        priceLabel.layer.borderWidth = 1
+        priceLabel.layer.cornerRadius = 5
     }
     
     private func setupConstraints() {
+        
         NSLayoutConstraint.activate([
             foodImage.topAnchor.constraint(equalTo: topAnchor, constant: 20),
             foodImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
@@ -55,7 +74,15 @@ final class FoodCell: UITableViewCell {
             stackView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
             stackView.leadingAnchor.constraint(equalTo: foodImage.trailingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
+            
+            nameLabel.widthAnchor.constraint(equalTo: stackView.widthAnchor),
+            descriptionLabel.widthAnchor.constraint(equalTo: stackView.widthAnchor),
+    
+            priceLabel.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 20),
+            priceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            priceLabel.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor, constant: -10),
+            priceLabel.widthAnchor.constraint(equalToConstant: 85),
+            priceLabel.heightAnchor.constraint(equalToConstant: 35)
         ])
     }
 }
@@ -65,9 +92,13 @@ extension FoodCell: FoodCellProtocol {
     func setup(with food: Food) {
         nameLabel.text = food.name
         descriptionLabel.text = food.description
+        priceLabel.text = food.price
     }
     
     func updateImage(_ image: UIImage?) {
-        foodImage.image = image
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            foodImage.image = image
+        }
     }
 }
