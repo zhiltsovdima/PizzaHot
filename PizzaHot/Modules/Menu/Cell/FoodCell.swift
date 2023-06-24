@@ -39,9 +39,12 @@ final class FoodCell: UITableViewCell {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
         
+        foodImage.contentMode = .scaleAspectFill
+        foodImage.clipsToBounds = true
+        
         stackView.axis = .vertical
         stackView.distribution = .fill
-        stackView.spacing = 10
+        stackView.spacing = 5
         
         [nameLabel, descriptionLabel].forEach {
             stackView.addArrangedSubview($0)
@@ -72,13 +75,13 @@ final class FoodCell: UITableViewCell {
             foodImage.widthAnchor.constraint(equalTo: foodImage.heightAnchor),
             
             stackView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            stackView.leadingAnchor.constraint(equalTo: foodImage.trailingAnchor, constant: 40),
+            stackView.leadingAnchor.constraint(equalTo: foodImage.trailingAnchor, constant: 20),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             
             nameLabel.widthAnchor.constraint(equalTo: stackView.widthAnchor),
             descriptionLabel.widthAnchor.constraint(equalTo: stackView.widthAnchor),
     
-            priceLabel.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 20),
+            priceLabel.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 10),
             priceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             priceLabel.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor, constant: -10),
             priceLabel.widthAnchor.constraint(equalToConstant: 85),

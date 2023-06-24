@@ -25,7 +25,7 @@ enum APIEndpoints {
     private var path: String {
         switch self {
         case .food:
-            return "/"
+            return "/v3/b8a0815d-58f1-4d4b-b696-d180b2650a49"
         }
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		622D02BA2A472D87008C877A /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622D02B92A472D87008C877A /* FoodCategory.swift */; };
 		62304D8D2A4450F1004D5127 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304D8C2A4450F1004D5127 /* AppDelegate.swift */; };
 		62304D8F2A4450F1004D5127 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304D8E2A4450F1004D5127 /* SceneDelegate.swift */; };
 		62304D962A4450F2004D5127 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62304D952A4450F2004D5127 /* Assets.xcassets */; };
@@ -29,9 +30,17 @@
 		62304DD32A449662004D5127 /* DataCodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304DD22A449662004D5127 /* DataCodingError.swift */; };
 		62304DD62A449B76004D5127 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304DD52A449B76004D5127 /* Food.swift */; };
 		62304DD92A455919004D5127 /* FoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304DD82A455919004D5127 /* FoodCell.swift */; };
+		62304DDC2A459794004D5127 /* LocationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304DDB2A459794004D5127 /* LocationButton.swift */; };
+		62304DDE2A45988B004D5127 /* UIButton + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304DDD2A45988B004D5127 /* UIButton + ext.swift */; };
+		62304DE02A45A50E004D5127 /* BannersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304DDF2A45A50E004D5127 /* BannersCollectionView.swift */; };
+		62304DE22A45A88F004D5127 /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304DE12A45A88F004D5127 /* BannerCell.swift */; };
+		62304DE42A45A9D3004D5127 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304DE32A45A9D3004D5127 /* Banner.swift */; };
+		62304DE62A45DF20004D5127 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304DE52A45DF20004D5127 /* CategoryCell.swift */; };
+		62304DE82A45E1EB004D5127 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304DE72A45E1EB004D5127 /* CategoriesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		622D02B92A472D87008C877A /* FoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
 		62304D892A4450F1004D5127 /* PizzaHot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaHot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62304D8C2A4450F1004D5127 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62304D8E2A4450F1004D5127 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +65,13 @@
 		62304DD22A449662004D5127 /* DataCodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCodingError.swift; sourceTree = "<group>"; };
 		62304DD52A449B76004D5127 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		62304DD82A455919004D5127 /* FoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCell.swift; sourceTree = "<group>"; };
+		62304DDB2A459794004D5127 /* LocationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationButton.swift; sourceTree = "<group>"; };
+		62304DDD2A45988B004D5127 /* UIButton + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + ext.swift"; sourceTree = "<group>"; };
+		62304DDF2A45A50E004D5127 /* BannersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersCollectionView.swift; sourceTree = "<group>"; };
+		62304DE12A45A88F004D5127 /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
+		62304DE32A45A9D3004D5127 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		62304DE52A45DF20004D5127 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		62304DE72A45E1EB004D5127 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +149,7 @@
 		62304DA32A4452C5004D5127 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				62304DDA2A459786004D5127 /* Views */,
 				62304DD72A4558D6004D5127 /* Cell */,
 				62304DD42A449B5C004D5127 /* Entities */,
 				62304DA72A445399004D5127 /* MenuViewController.swift */,
@@ -189,6 +206,7 @@
 			children = (
 				62304DC12A447C0E004D5127 /* URLComponents + ext.swift */,
 				62304DC32A447C1E004D5127 /* URL + ext.swift */,
+				62304DDD2A45988B004D5127 /* UIButton + ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -223,6 +241,8 @@
 			isa = PBXGroup;
 			children = (
 				62304DD52A449B76004D5127 /* Food.swift */,
+				62304DE32A45A9D3004D5127 /* Banner.swift */,
+				622D02B92A472D87008C877A /* FoodCategory.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -231,8 +251,20 @@
 			isa = PBXGroup;
 			children = (
 				62304DD82A455919004D5127 /* FoodCell.swift */,
+				62304DE12A45A88F004D5127 /* BannerCell.swift */,
+				62304DE52A45DF20004D5127 /* CategoryCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		62304DDA2A459786004D5127 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				62304DDB2A459794004D5127 /* LocationButton.swift */,
+				62304DDF2A45A50E004D5127 /* BannersCollectionView.swift */,
+				62304DE72A45E1EB004D5127 /* CategoriesView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62304DE02A45A50E004D5127 /* BannersCollectionView.swift in Sources */,
 				62304DAC2A4453DF004D5127 /* MenuInteractor.swift in Sources */,
 				62304DC82A447CE5004D5127 /* NetworkError.swift in Sources */,
 				62304DC22A447C0E004D5127 /* URLComponents + ext.swift in Sources */,
@@ -312,19 +345,26 @@
 				62304D8D2A4450F1004D5127 /* AppDelegate.swift in Sources */,
 				62304DB62A44666E004D5127 /* TabBarController.swift in Sources */,
 				62304DA82A445399004D5127 /* MenuViewController.swift in Sources */,
+				62304DDE2A45988B004D5127 /* UIButton + ext.swift in Sources */,
 				62304D8F2A4450F1004D5127 /* SceneDelegate.swift in Sources */,
 				62304DCB2A449271004D5127 /* FoodService.swift in Sources */,
+				622D02BA2A472D87008C877A /* FoodCategory.swift in Sources */,
 				62304DB12A44573C004D5127 /* AppRouter.swift in Sources */,
 				62304DBF2A447B8C004D5127 /* APIEndpoint.swift in Sources */,
 				62304DC42A447C1E004D5127 /* URL + ext.swift in Sources */,
 				62304DCE2A44945C004D5127 /* FoodData.swift in Sources */,
 				62304DD62A449B76004D5127 /* Food.swift in Sources */,
 				62304DAA2A4453CC004D5127 /* MenuPresenter.swift in Sources */,
+				62304DE22A45A88F004D5127 /* BannerCell.swift in Sources */,
 				62304DBC2A447966004D5127 /* TabBarPage.swift in Sources */,
 				62304DD02A44962E004D5127 /* DataCoder.swift in Sources */,
 				62304DD92A455919004D5127 /* FoodCell.swift in Sources */,
+				62304DE62A45DF20004D5127 /* CategoryCell.swift in Sources */,
+				62304DDC2A459794004D5127 /* LocationButton.swift in Sources */,
+				62304DE42A45A9D3004D5127 /* Banner.swift in Sources */,
 				62304DC62A447C8B004D5127 /* NetworkManager.swift in Sources */,
 				62304DB92A4466BE004D5127 /* R.swift in Sources */,
+				62304DE82A45E1EB004D5127 /* CategoriesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

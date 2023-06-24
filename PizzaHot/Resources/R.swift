@@ -26,12 +26,17 @@ enum R {
         static let cartIcon = UIImage(systemName: "cart.fill")
         
         static let defaultFood = UIImage(systemName: "takeoutbag.and.cup.and.straw")!
+        
+        static let downIcon = UIImage(named: "down")
+        
+        static let banner1 = UIImage(named: "pizza")!
+        static let banner2 = UIImage(named: "cat")!
     }
     
     enum Colors {
         static let tabBarBackgrorund = UIColor.white
         static let accent = UIColor.systemPink
-        static let lightAccent = UIColor.systemPink.withAlphaComponent(0.5)
+        static let lightAccent = UIColor.systemPink.withAlphaComponent(0.3)
     }
     
     enum Identifiers {
