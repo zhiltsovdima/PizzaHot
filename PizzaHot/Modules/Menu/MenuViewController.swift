@@ -126,6 +126,11 @@ extension MenuViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension MenuViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let tableHeight = view.bounds.height
         let cellHeight = tableHeight / 5

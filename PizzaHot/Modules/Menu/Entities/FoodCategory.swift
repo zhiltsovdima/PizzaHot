@@ -12,6 +12,7 @@ enum FoodCategory: CaseIterable {
     case combo
     case desserts
     case drinks
+    case other
     
     var description: String {
         switch self {
@@ -19,6 +20,7 @@ enum FoodCategory: CaseIterable {
         case .desserts: return "Десерты"
         case .drinks: return "Напитки"
         case .pizza: return "Пицца"
+        case .other: return "Другое"
         }
     }
     
@@ -28,6 +30,23 @@ enum FoodCategory: CaseIterable {
         case .combo: return 1
         case .desserts: return 2
         case .drinks: return 3
+        case .other: return 4
+        }
+    }
+    
+    static func validateCategory(_ categoryString: String) -> FoodCategory {
+        let lowercaseString = categoryString.lowercased()
+        switch lowercaseString {
+        case "pizza":
+            return .pizza
+        case "combo":
+            return .combo
+        case "dessert":
+            return .desserts
+        case "drinks":
+            return .drinks
+        default:
+            return .other
         }
     }
 }
