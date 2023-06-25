@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FoodData: Codable {
+struct FoodData: Codable, Equatable {
     let name: String
     let category: String
     let description: String

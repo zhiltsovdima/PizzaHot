@@ -39,7 +39,19 @@
 		62304DE82A45E1EB004D5127 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304DE72A45E1EB004D5127 /* CategoriesView.swift */; };
 		62B179A42A480559000B1744 /* UIColor + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B179A32A480559000B1744 /* UIColor + ext.swift */; };
 		62B179A62A480BF1000B1744 /* UIView + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B179A52A480BF1000B1744 /* UIView + ext.swift */; };
+		62B179B52A480E31000B1744 /* NetworkManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B179B42A480E31000B1744 /* NetworkManagerMock.swift */; };
+		62B179B72A480EB4000B1744 /* FoodServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B179B62A480EB4000B1744 /* FoodServiceTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		62B179AF2A480DF6000B1744 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62304D812A4450F0004D5127 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62304D882A4450F1004D5127;
+			remoteInfo = PizzaHot;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		622D02B92A472D87008C877A /* FoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
@@ -76,10 +88,20 @@
 		62304DE72A45E1EB004D5127 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
 		62B179A32A480559000B1744 /* UIColor + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + ext.swift"; sourceTree = "<group>"; };
 		62B179A52A480BF1000B1744 /* UIView + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + ext.swift"; sourceTree = "<group>"; };
+		62B179AB2A480DF6000B1744 /* PizzaHotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PizzaHotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		62B179B42A480E31000B1744 /* NetworkManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerMock.swift; sourceTree = "<group>"; };
+		62B179B62A480EB4000B1744 /* FoodServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		62304D862A4450F1004D5127 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62B179A82A480DF6000B1744 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -93,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				62304D8B2A4450F1004D5127 /* PizzaHot */,
+				62B179AC2A480DF6000B1744 /* PizzaHotTests */,
 				62304D8A2A4450F1004D5127 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				62304D892A4450F1004D5127 /* PizzaHot.app */,
+				62B179AB2A480DF6000B1744 /* PizzaHotTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -273,6 +297,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		62B179AC2A480DF6000B1744 /* PizzaHotTests */ = {
+			isa = PBXGroup;
+			children = (
+				62B179B42A480E31000B1744 /* NetworkManagerMock.swift */,
+				62B179B62A480EB4000B1744 /* FoodServiceTests.swift */,
+			);
+			path = PizzaHotTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -293,6 +326,24 @@
 			productReference = 62304D892A4450F1004D5127 /* PizzaHot.app */;
 			productType = "com.apple.product-type.application";
 		};
+		62B179AA2A480DF6000B1744 /* PizzaHotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62B179B12A480DF6000B1744 /* Build configuration list for PBXNativeTarget "PizzaHotTests" */;
+			buildPhases = (
+				62B179A72A480DF6000B1744 /* Sources */,
+				62B179A82A480DF6000B1744 /* Frameworks */,
+				62B179A92A480DF6000B1744 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62B179B02A480DF6000B1744 /* PBXTargetDependency */,
+			);
+			name = PizzaHotTests;
+			productName = PizzaHotTests;
+			productReference = 62B179AB2A480DF6000B1744 /* PizzaHotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -305,6 +356,10 @@
 				TargetAttributes = {
 					62304D882A4450F1004D5127 = {
 						CreatedOnToolsVersion = 14.3;
+					};
+					62B179AA2A480DF6000B1744 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 62304D882A4450F1004D5127;
 					};
 				};
 			};
@@ -322,6 +377,7 @@
 			projectRoot = "";
 			targets = (
 				62304D882A4450F1004D5127 /* PizzaHot */,
+				62B179AA2A480DF6000B1744 /* PizzaHotTests */,
 			);
 		};
 /* End PBXProject section */
@@ -333,6 +389,13 @@
 			files = (
 				62304D992A4450F2004D5127 /* LaunchScreen.storyboard in Resources */,
 				62304D962A4450F2004D5127 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62B179A92A480DF6000B1744 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,7 +439,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		62B179A72A480DF6000B1744 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62B179B72A480EB4000B1744 /* FoodServiceTests.swift in Sources */,
+				62B179B52A480E31000B1744 /* NetworkManagerMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		62B179B02A480DF6000B1744 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62304D882A4450F1004D5127 /* PizzaHot */;
+			targetProxy = 62B179AF2A480DF6000B1744 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		62304D972A4450F2004D5127 /* LaunchScreen.storyboard */ = {
@@ -558,6 +638,42 @@
 			};
 			name = Release;
 		};
+		62B179B22A480DF6000B1744 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J846X7UY52;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhiltsov.PizzaHotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PizzaHot.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PizzaHot";
+			};
+			name = Debug;
+		};
+		62B179B32A480DF6000B1744 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J846X7UY52;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhiltsov.PizzaHotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PizzaHot.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PizzaHot";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -575,6 +691,15 @@
 			buildConfigurations = (
 				62304D9E2A4450F2004D5127 /* Debug */,
 				62304D9F2A4450F2004D5127 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62B179B12A480DF6000B1744 /* Build configuration list for PBXNativeTarget "PizzaHotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62B179B22A480DF6000B1744 /* Debug */,
+				62B179B32A480DF6000B1744 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
