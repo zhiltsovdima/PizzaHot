@@ -22,6 +22,9 @@ final class MenuViewController: UIViewController {
     private let tableView = UITableView()
     
     private var lastVisibleSection = -1
+    
+    private var bannersViewHeightConstraint: NSLayoutConstraint?
+    private var bannersViewOriginalHeight: CGFloat = 124
         
     init(_ presenter: MenuPresenterProtocol) {
         self.presenter = presenter
@@ -41,6 +44,8 @@ final class MenuViewController: UIViewController {
         presenter.updateFoods()
     }
 }
+
+// MARK: - Views Settings
 
 extension MenuViewController {
     
@@ -67,21 +72,48 @@ extension MenuViewController {
             locationButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             locationButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             
-            bannersView.topAnchor.constraint(equalTo: locationButton.bottomAnchor, constant: 20),
+            bannersView.topAnchor.constraint(equalTo: locationButton.bottomAnchor),
             bannersView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             bannersView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            bannersView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1/7),
             
             categoriesView.topAnchor.constraint(equalTo: bannersView.bottomAnchor, constant: 20),
             categoriesView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             categoriesView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            categoriesView.heightAnchor.constraint(equalToConstant: 40),
+            categoriesView.heightAnchor.constraint(equalToConstant: 32),
             
             tableView.topAnchor.constraint(equalTo: categoriesView.bottomAnchor, constant: 20),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)            
         ])
+        
+        bannersViewHeightConstraint = bannersView.heightAnchor.constraint(equalToConstant: bannersViewOriginalHeight)
+        bannersViewHeightConstraint?.isActive = true
+    }
+}
+
+// MARK: - Private Methods
+
+extension MenuViewController {
+    
+    private func updateSelectedCategoryIfNeeded() {
+        guard let topIndexPath = tableView.indexPathsForVisibleRows?.first else { return }
+        let currentSection = topIndexPath.section
+        if currentSection != lastVisibleSection {
+            lastVisibleSection = currentSection
+            categoriesView.didSelectCategory(currentSection)
+        }
+    }
+    
+    private func adjustBannersViewHeight(scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        if offsetY > 0 {
+            // Scrolling down
+            bannersViewHeightConstraint?.constant = max(bannersViewOriginalHeight - offsetY, 0)
+        } else {
+            // Scrolling up
+            bannersViewHeightConstraint?.constant = bannersViewOriginalHeight
+        }
     }
 }
 
@@ -147,13 +179,8 @@ extension MenuViewController: UITableViewDelegate {
 
 extension MenuViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if let topIndexPath = tableView.indexPathsForVisibleRows?.first {
-            let currentSection = topIndexPath.section
-            if currentSection != lastVisibleSection {
-                lastVisibleSection = currentSection
-                categoriesView.didSelectCategory(currentSection)
-            }
-        }
+        adjustBannersViewHeight(scrollView: scrollView)
+        updateSelectedCategoryIfNeeded()
     }
 }
 

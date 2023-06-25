@@ -43,8 +43,10 @@ extension MenuPresenter: MenuPresenterProtocol {
             case .success(let loadedFoods):
                 updateFoodSections(with: loadedFoods)
                 view?.reloadData()
+            case .failure(let error as NetworkError):
+                print(error.description)
             case .failure(let error):
-                print(error)
+                print(error.localizedDescription)
             }
         }
     }
@@ -85,7 +87,7 @@ extension MenuPresenter: MenuPresenterProtocol {
             case .failure(let error):
                 cell.updateImage(R.Images.defaultFood)
                 food.isImageLoaded = false
-                print(error)
+                print(error.localizedDescription)
             }
         }
     }
