@@ -17,6 +17,7 @@ final class TabBarController: UITabBarController {
     
     private func setupAppearance() {
         tabBar.tintColor = R.Colors.accent
-        tabBar.backgroundColor = R.Colors.tabBarBackgrorund
+        tabBar.backgroundColor = R.Colors.backgrorund
+        tabBar.addUpperBorder(with: .lightGray.withAlphaComponent(0.5), height: 0.5)
     }
 }

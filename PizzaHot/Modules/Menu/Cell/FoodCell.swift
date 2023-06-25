@@ -32,7 +32,7 @@ final class FoodCell: UITableViewCell {
     }
     
     private func setupViews() {
-        backgroundColor = .clear
+        backgroundColor = R.Colors.backgrorund
         
         [foodImage, stackView, priceLabel].forEach {
             addSubview($0)
@@ -50,7 +50,7 @@ final class FoodCell: UITableViewCell {
             stackView.addArrangedSubview($0)
         }
         
-        nameLabel.font = .boldSystemFont(ofSize: 18)
+        nameLabel.font = .boldSystemFont(ofSize: 17)
         nameLabel.numberOfLines = 0
         
         descriptionLabel.font = .systemFont(ofSize: 13)
@@ -59,7 +59,7 @@ final class FoodCell: UITableViewCell {
         
         priceLabel.backgroundColor = .clear
         priceLabel.textColor = R.Colors.accent
-        priceLabel.font = .systemFont(ofSize: 14)
+        priceLabel.font = .systemFont(ofSize: 13)
         priceLabel.textAlignment = .center
         priceLabel.layer.borderColor = R.Colors.accent.cgColor
         priceLabel.layer.borderWidth = 1
@@ -84,8 +84,8 @@ final class FoodCell: UITableViewCell {
             priceLabel.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 10),
             priceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             priceLabel.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor, constant: -10),
-            priceLabel.widthAnchor.constraint(equalToConstant: 85),
-            priceLabel.heightAnchor.constraint(equalToConstant: 35)
+            priceLabel.widthAnchor.constraint(equalToConstant: 87),
+            priceLabel.heightAnchor.constraint(equalToConstant: 32)
         ])
     }
 }

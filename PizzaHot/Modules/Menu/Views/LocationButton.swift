@@ -29,7 +29,7 @@ final class LocationButton: UIButton {
         backgroundColor = .clear
         
         title.text = "Москва"
-        title.font = .boldSystemFont(ofSize: 18)
+        title.font = .boldSystemFont(ofSize: 17)
         icon.image = R.Images.downIcon
         icon.contentMode = .scaleAspectFit
     }

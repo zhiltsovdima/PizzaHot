@@ -37,6 +37,8 @@
 		62304DE42A45A9D3004D5127 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304DE32A45A9D3004D5127 /* Banner.swift */; };
 		62304DE62A45DF20004D5127 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304DE52A45DF20004D5127 /* CategoryCell.swift */; };
 		62304DE82A45E1EB004D5127 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62304DE72A45E1EB004D5127 /* CategoriesView.swift */; };
+		62B179A42A480559000B1744 /* UIColor + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B179A32A480559000B1744 /* UIColor + ext.swift */; };
+		62B179A62A480BF1000B1744 /* UIView + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62B179A52A480BF1000B1744 /* UIView + ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		62304DE32A45A9D3004D5127 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		62304DE52A45DF20004D5127 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		62304DE72A45E1EB004D5127 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		62B179A32A480559000B1744 /* UIColor + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + ext.swift"; sourceTree = "<group>"; };
+		62B179A52A480BF1000B1744 /* UIView + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +211,8 @@
 				62304DC12A447C0E004D5127 /* URLComponents + ext.swift */,
 				62304DC32A447C1E004D5127 /* URL + ext.swift */,
 				62304DDD2A45988B004D5127 /* UIButton + ext.swift */,
+				62B179A32A480559000B1744 /* UIColor + ext.swift */,
+				62B179A52A480BF1000B1744 /* UIView + ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -341,9 +347,11 @@
 				62304DAC2A4453DF004D5127 /* MenuInteractor.swift in Sources */,
 				62304DC82A447CE5004D5127 /* NetworkError.swift in Sources */,
 				62304DC22A447C0E004D5127 /* URLComponents + ext.swift in Sources */,
+				62B179A62A480BF1000B1744 /* UIView + ext.swift in Sources */,
 				62304DD32A449662004D5127 /* DataCodingError.swift in Sources */,
 				62304D8D2A4450F1004D5127 /* AppDelegate.swift in Sources */,
 				62304DB62A44666E004D5127 /* TabBarController.swift in Sources */,
+				62B179A42A480559000B1744 /* UIColor + ext.swift in Sources */,
 				62304DA82A445399004D5127 /* MenuViewController.swift in Sources */,
 				62304DDE2A45988B004D5127 /* UIButton + ext.swift in Sources */,
 				62304D8F2A4450F1004D5127 /* SceneDelegate.swift in Sources */,

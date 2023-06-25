@@ -39,7 +39,8 @@ final class CategoryCell: UICollectionViewCell {
     }
     
     private func updateBackgroundColor() {
-        backgroundColor = isSelected ? R.Colors.lightAccent : .clear
+        backgroundColor = isSelected ? R.Colors.buttonSelected : .clear
+        layer.borderColor = isSelected ? R.Colors.buttonSelected.cgColor : R.Colors.lightAccent.cgColor
         categoryName.textColor = isSelected ? R.Colors.accent : R.Colors.lightAccent
         categoryName.font = isSelected ? .boldSystemFont(ofSize: 14) : .systemFont(ofSize: 14)
     }
@@ -47,11 +48,11 @@ final class CategoryCell: UICollectionViewCell {
     private func setupViews() {
         backgroundColor = .clear
         layer.borderWidth = 1
-        layer.borderColor = R.Colors.lightAccent.cgColor
 
         addSubview(categoryName)
         
         categoryName.numberOfLines = 0
+        categoryName.font = .systemFont(ofSize: 13)
         categoryName.textAlignment = .center
     }
     

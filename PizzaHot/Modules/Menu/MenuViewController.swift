@@ -45,7 +45,7 @@ final class MenuViewController: UIViewController {
 extension MenuViewController {
     
     private func setupAppearance() {
-        view.backgroundColor = .lightGray
+        view.backgroundColor = R.Colors.categoriesBackground
         navigationItem.largeTitleDisplayMode = .never
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
@@ -56,7 +56,7 @@ extension MenuViewController {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
         categoriesView.presenter = presenter
-        tableView.backgroundColor = .systemBackground
+        tableView.backgroundColor = R.Colors.backgrorund
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(FoodCell.self, forCellReuseIdentifier: R.Identifiers.foodCell)

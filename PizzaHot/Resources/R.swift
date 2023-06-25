@@ -20,23 +20,25 @@ enum R {
     }
     
     enum Images {
-        static let menuIcon = UIImage(systemName: "fork.knife")
-        static let contactsIcon = UIImage(systemName: "mappin")
-        static let profileIcon = UIImage(systemName: "person.fill")
-        static let cartIcon = UIImage(systemName: "cart.fill")
+        static let menuIcon = UIImage(named: "menu")
+        static let contactsIcon = UIImage(named: "contacts")
+        static let profileIcon = UIImage(named: "profile")
+        static let cartIcon = UIImage(named: "cart")
         
         static let defaultFood = UIImage(systemName: "takeoutbag.and.cup.and.straw")!
         
-        static let downIcon = UIImage(named: "down")
+        static let downIcon = UIImage(named: "downArrow")
         
-        static let banner1 = UIImage(named: "pizza")!
-        static let banner2 = UIImage(named: "cat")!
+        static let banner1 = UIImage(named: "banner1")!
+        static let banner2 = UIImage(named: "banner2")!
     }
     
     enum Colors {
-        static let tabBarBackgrorund = UIColor.white
-        static let accent = UIColor.systemPink
-        static let lightAccent = UIColor.systemPink.withAlphaComponent(0.3)
+        static let categoriesBackground = UIColor(hexString: "#F3F5F9")
+        static let backgrorund = UIColor.white
+        static let accent = UIColor(hexString: "##FD3A69")
+        static let buttonSelected = UIColor(hexString: "##FD3A69").withAlphaComponent(0.2)
+        static let lightAccent = UIColor(hexString: "#FD3A69").withAlphaComponent(0.4)
     }
     
     enum Identifiers {
