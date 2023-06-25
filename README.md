@@ -1,2 +1,3 @@
 # PizzaHot
-![Untitled](https://github.com/zhiltsovdima/PizzaHot/assets/50846656/b726cac2-4f27-474e-a628-6fc395c130dd)
+
+![Untitled](https://github.com/zhiltsovdima/PizzaHot/assets/50846656/ce0b81de-58c9-4dac-a731-a68acc4e7321)
